@@ -1,3 +1,23 @@
+newmtl Golden:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Pelaje.png
+Ni 1.00
+newmtl Patineta:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Patineta:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Patineta.png
+Ni 1.00
 newmtl black_piano:initialShadingGroup
 illum 4
 Kd 0.00 0.00 0.00
@@ -5,38 +25,44 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert2SG
+newmtl black_piano:lambert2SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd Tecla_b.png
 Ni 1.00
-newmtl lambert3SG
+newmtl black_piano:lambert3SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd Tecla_n.png
 Ni 1.00
-newmtl lambert4SG
+newmtl black_piano:lambert4SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd Tecla_n.png
 Ni 1.00
-newmtl lambert6SG
+newmtl black_piano:lambert6SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
 Ni 1.00
-newmtl lambert7SG
+newmtl black_piano:lambert7SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd piano.jpg
+Ni 1.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
 Ni 1.00

@@ -155,11 +155,12 @@ int main()
 	Shader lightingShader("Shaders/lighting.vs", "Shaders/lighting.frag");
 	Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
 	Shader Anim2("Shaders/anim2.vs", "Shaders/anim2.frag");
-	
+
+	//CARGA DE MODELOS
 	Model Piso((char*)"Models/Piso/Piso.obj");
 	Model Patineta((char*)"Models/Patineta/Patineta.obj");
-	Model Piano((char*)"Models/Piano/Piano.obj");
-	Model Golden((char*)"Models/Golden/Golden.obj");
+	Model Piano((char*)"Models/Piano/black_piano.obj");
+	Model Golden((char*)"Models/Golden/Golden.obj"); 
 
 
 	// First, set the container's VAO (and VBO)
@@ -307,6 +308,23 @@ int main()
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		//model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		Piso.Draw(lightingShader);
+
+
+
+		//Golden
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-2.0f, 1.0f, 0.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Golden.Draw(lightingShader);
+		glBindVertexArray(0);
+
+		//model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(5.0f, 3.0f, 0));
+		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		Piano.Draw(lightingShader);
+
 		//model = glm::translate(model, glm::vec3(-0.5f, 0.0f, 0.5f));
 		//Box.Draw(lightingShader);
 		//Esfera.Draw(lightingShader);
@@ -322,41 +340,20 @@ int main()
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		model = glm::mat4(1); //Seteamos la matriz
+		model = glm::translate(model, glm::vec3(0.0f, 2.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
 		Patineta.Draw(Anim2);
 
-		//Piano
-
-
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.ambient"), 0.1f, 0.1f, 0.1f);  //Material ambiental
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 0.933f, 0.929f, 0.125f);  //Material Difuso
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.specular"), 0.1f, 0.1f, 0.1f); //Material Especular
-		glUniform1f(glGetUniformLocation(lightingShader.Program, "material.shininess"), 25.0f);
-
-
-		// Draw the loaded model
-		model = glm::mat4(1);
-
-
-		model = glm::translate(model, glm::vec3(2.0f, 0.0f, 0.0f));
-		glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-		glBindVertexArray(VAO);
-		// glDrawArrays(GL_TRIANGLES, 0, 36);
-
-
-		Piano.Draw(lightingShader);
-
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "material.diffuse"), 1.0f, 1.0f, 1.0f);
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-2.0f, 0.0f, 0.0f));
-		Golden.Draw(lightingShader);
-
-		
-
-
-
-
+		////Piano
+		//model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(5.0f, 3.0f, 0));
+		////model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
+		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		//Piano.Draw(lightingShader);
+		//glBindVertexArray(0);
 
 
 		// Also draw the lamp object, again binding the appropriate shader
