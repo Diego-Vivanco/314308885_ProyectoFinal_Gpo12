@@ -308,6 +308,11 @@ int main()
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		//model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		Piso.Draw(lightingShader);
+		model = glm::translate(model, glm::vec3(-3.0f, 0.3f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		Piano.Draw(lightingShader);
 
 
 
@@ -318,12 +323,12 @@ int main()
 		Golden.Draw(lightingShader);
 		glBindVertexArray(0);
 
-		//model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(5.0f, 3.0f, 0));
-		model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
-		Piano.Draw(lightingShader);
+		////model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(5.0f, 3.0f, 0));
+		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		//Piano.Draw(lightingShader);
 
 		//model = glm::translate(model, glm::vec3(-0.5f, 0.0f, 0.5f));
 		//Box.Draw(lightingShader);
