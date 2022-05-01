@@ -160,7 +160,8 @@ int main()
 	Model Piso((char*)"Models/Piso/Piso.obj");
 	Model Patineta((char*)"Models/Patineta/Patineta.obj");
 	Model Piano((char*)"Models/Piano/black_piano.obj");
-	Model Golden((char*)"Models/Golden/Golden.obj"); 
+	Model Golden((char*)"Models/Golden/Golden.obj");
+	Model Gramofono((char*)"Models/Gramofono/Gramofono.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -321,7 +322,13 @@ int main()
 		model = glm::translate(model, glm::vec3(-2.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Golden.Draw(lightingShader);
-		glBindVertexArray(0);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(3.0f, 0.8f, 0.0f));
+		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Gramofono.Draw(lightingShader);
+		glBindVertexArray(0); 
 
 		////model = glm::mat4(1);
 		//model = glm::translate(model, glm::vec3(5.0f, 3.0f, 0));
@@ -334,8 +341,8 @@ int main()
 		//Box.Draw(lightingShader);
 		//Esfera.Draw(lightingShader);
 
-		//Patineta
 
+		//Patineta
 		Anim2.Use();
 		tiempo = glfwGetTime();
 		modelLoc = glGetUniformLocation(Anim2.Program, "model");
@@ -349,16 +356,6 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
 		Patineta.Draw(Anim2);
-
-		////Piano
-		//model = glm::mat4(1);
-		//model = glm::translate(model, glm::vec3(5.0f, 3.0f, 0));
-		////model = glm::rotate(model, glm::radians(rotKit), glm::vec3(0.0f, 1.0f, 0.0));
-		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
-		//Piano.Draw(lightingShader);
-		//glBindVertexArray(0);
 
 
 		// Also draw the lamp object, again binding the appropriate shader
