@@ -162,6 +162,7 @@ int main()
 	Model Piano((char*)"Models/Piano/black_piano.obj");
 	Model Golden((char*)"Models/Golden/Golden.obj");
 	Model Gramofono((char*)"Models/Gramofono/Gramofono.obj");
+	Model Delorean((char*)"Models/Delorean/Delorean.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -328,6 +329,16 @@ int main()
 		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Gramofono.Draw(lightingShader);
+
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(5.0f, 0.8f, 2.0f));
+		model = glm::scale(model, glm::vec3(5.0f, 2.0f, 5.0f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Delorean.Draw(lightingShader);
+
+
+
 		glBindVertexArray(0); 
 
 		////model = glm::mat4(1);
