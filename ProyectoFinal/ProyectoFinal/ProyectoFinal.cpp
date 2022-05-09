@@ -158,6 +158,7 @@ int main()
 
 	//CARGA DE MODELOS
 	Model Piso((char*)"Models/Piso/Piso.obj");
+	Model Fachada((char*)"Models/Fachada/Fachada.obj");
 	Model Patineta((char*)"Models/Patineta/Patineta.obj");
 	Model Piano((char*)"Models/Piano/black_piano.obj");
 	Model Golden((char*)"Models/Golden/Golden.obj");
@@ -310,6 +311,13 @@ int main()
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		//model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		Piso.Draw(lightingShader);
+
+		model = glm::translate(model, glm::vec3(-10.0f, 0.3f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		Fachada.Draw(lightingShader);
+
 		model = glm::translate(model, glm::vec3(-3.0f, 0.3f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
