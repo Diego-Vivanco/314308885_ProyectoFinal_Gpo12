@@ -221,9 +221,9 @@ int main()
 
 		// Directional light   ->   Son direcciones NO POSICIONES
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.direction"), -0.2f, -1.0f, -0.3f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"), 0.1f, 0.1f, 0.1f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.1f, 0.1f, 0.1f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 1.0f, 1.0f, 1.0f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"), 1.0f, 1.0f, 1.0f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.0f, 0.0f, 0.0f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 0.0f, 0.0f, 0.0f);
 
 
 		// Point light 1  -- VARIABLES
@@ -312,7 +312,7 @@ int main()
 		//model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		Piso.Draw(lightingShader);
 
-		model = glm::mat4(1);
+		//model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-10.0f, 0.3f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -342,7 +342,7 @@ int main()
 
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(14.0f, 0.8f, -6.0f));
-		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Delorean.Draw(lightingShader);
 
@@ -350,16 +350,6 @@ int main()
 
 		glBindVertexArray(0); 
 
-		////model = glm::mat4(1);
-		//model = glm::translate(model, glm::vec3(5.0f, 3.0f, 0));
-		//model = glm::scale(model, glm::vec3(0.02f, 0.02f, 0.02f));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
-		//Piano.Draw(lightingShader);
-
-		//model = glm::translate(model, glm::vec3(-0.5f, 0.0f, 0.5f));
-		//Box.Draw(lightingShader);
-		//Esfera.Draw(lightingShader);
 
 
 		//Patineta
