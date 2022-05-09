@@ -325,15 +325,15 @@ int main()
 		Golden.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(3.0f, 0.8f, 0.0f));
+		model = glm::translate(model, glm::vec3(3.0f, 0.8f, -3.0f));
 		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Gramofono.Draw(lightingShader);
 
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(5.0f, 0.8f, 2.0f));
-		model = glm::scale(model, glm::vec3(5.0f, 2.0f, 5.0f));
+		model = glm::translate(model, glm::vec3(14.0f, 0.8f, -6.0f));
+		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Delorean.Draw(lightingShader);
 
