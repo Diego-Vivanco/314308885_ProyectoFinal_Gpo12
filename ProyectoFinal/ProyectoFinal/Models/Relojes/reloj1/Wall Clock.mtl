@@ -6,14 +6,6 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 1.00 1.00 1.00
 Ns 85.00
-newmtl Wall_Clock:Mat_1
-illum 4
-Kd 0.80 0.80 0.80
-Ka 1.00 1.00 1.00
-Tf 0.00 0.00 0.00
-Ni 1.33
-Ks 1.00 1.00 1.00
-Ns 50.00
 newmtl Wall_Clock:Mat_2
 illum 4
 Kd 0.81 0.00 0.00
@@ -42,5 +34,5 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd azul.PNG
+map_Kd Azul.png
 Ni 1.00

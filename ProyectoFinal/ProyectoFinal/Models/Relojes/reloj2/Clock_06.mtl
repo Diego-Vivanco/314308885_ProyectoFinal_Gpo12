@@ -8,14 +8,6 @@ map_Ka BUBING_2.GIF
 Ni 1.50
 Ks 0.00 0.00 0.00
 Ns 10.00
-newmtl Clock_06:Glass1
-illum 4
-Kd 0.59 0.59 0.59
-Ka 0.59 0.59 0.59
-Tf 0.00 0.00 0.00
-Ni 1.50
-Ks 0.00 0.00 0.00
-Ns 10.00
 newmtl Clock_06:Golest
 illum 4
 Kd 0.00 0.00 0.00
@@ -44,6 +36,13 @@ Tf 1.00 1.00 1.00
 Ni 1.50
 Ks 0.00 0.00 0.00
 Ns 10.00
+newmtl Clock_06:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd uhr.png
+Ni 1.00
 newmtl Clock_06:wire_140088225
 illum 4
 Kd 0.55 0.35 0.88
@@ -52,10 +51,9 @@ Tf 1.00 1.00 1.00
 Ni 1.00
 Ks 0.35 0.35 0.35
 Ns 32.00
-newmtl lambert4SG
+newmtl aiStandardSurface1SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd uhr.png
-Ni 1.00
+Ni 0.00
