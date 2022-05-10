@@ -164,6 +164,7 @@ int main()
 	Model Golden((char*)"Models/Golden/Golden.obj");
 	Model Gramofono((char*)"Models/Gramofono/Gramofono.obj");
 	Model Delorean((char*)"Models/Delorean/Delorean.obj");
+	Model Reloj1((char*)"Models/Relojes/reloj1/Wall Clock.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -346,7 +347,11 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Delorean.Draw(lightingShader);
 
-
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-14.0f, 0.8f, -6.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Reloj1.Draw(lightingShader);
 
 		glBindVertexArray(0); 
 
