@@ -167,7 +167,7 @@ int main()
 	Model Reloj1((char*)"Models/Relojes/reloj1/Wall Clock.obj");
 	Model Reloj2((char*)"Models/Relojes/reloj2/Clock_06.obj");
 	Model Reloj3((char*)"Models/Relojes/reloj3/Clock_obj.obj");
-
+	Model Bote((char*)"Models/Bote/pobelle/pobelle.obj");
 
 	// First, set the container's VAO (and VBO)
 	GLuint VBO, VAO;
@@ -370,6 +370,13 @@ int main()
 		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Reloj3.Draw(lightingShader);
+
+		//Bote
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-8.0f, 0.8f, 6.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Bote.Draw(lightingShader);
 		glBindVertexArray(0);
 
 
