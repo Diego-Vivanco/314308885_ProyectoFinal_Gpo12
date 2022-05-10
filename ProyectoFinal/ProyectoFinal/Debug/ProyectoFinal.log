@@ -1,28 +1,25 @@
 ﻿  ProyectoFinal.cpp
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(197,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(232,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(233,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(199,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
 C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(234,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(362,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(516,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(517,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(521,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(522,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(524,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(525,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_helper.obj)' o en 'C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(SOIL2.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(235,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(236,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(378,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(532,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(533,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(537,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(538,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(540,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(541,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   ProyectoFinal.vcxproj -> C:\Users\d_arm\OneDrive\Escritorio\Repositorio\314308885_ProyectoFinal_Gpo12\ProyectoFinal\Debug\ProyectoFinal.exe
