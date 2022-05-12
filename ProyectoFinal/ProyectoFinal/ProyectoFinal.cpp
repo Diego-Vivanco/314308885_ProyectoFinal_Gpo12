@@ -312,18 +312,23 @@ int main()
 		model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		model = glm::translate(model, glm::vec3(0.0f, -10.0f, 0.0f));
 		//model = glm::scale(model, glm::vec3(5.0f, 5.0f, 5.0f));
 		Piso.Draw(lightingShader);
 
-		//model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-10.0f, 0.3f, 0.0f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+
+		//Fachada
+	    model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.5f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		Fachada.Draw(lightingShader);
-	
-		model = glm::translate(model, glm::vec3(-3.0f, 0.3f, 0.0f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		//Piano
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(4.0f, 0.8f, -1.0f));
+		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		Piano.Draw(lightingShader);
@@ -332,20 +337,22 @@ int main()
 
 		//Golden
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-2.0f, 1.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
+		model = glm::translate(model, glm::vec3(6.0f, 2.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Golden.Draw(lightingShader);
-
+		//Gramofono
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(3.0f, 0.8f, -3.0f));
-		model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+		model = glm::translate(model, glm::vec3(3.0f, 0.8f, -1.0f));
+		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Gramofono.Draw(lightingShader);
 
-
+		//Delorean
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(14.0f, 0.8f, -6.0f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::translate(model, glm::vec3(9.0f, 1.0f, 9.0f));
+		model = glm::scale(model, glm::vec3(1.0f, 0.8f, 1.0f));
+		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Delorean.Draw(lightingShader);
 
@@ -366,15 +373,15 @@ int main()
 
 		//Reloj 3
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-12.0f, 0.8f, 10.0f));
+		model = glm::translate(model, glm::vec3(2.0f, 0.8f, 10.0f));
 		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Reloj3.Draw(lightingShader);
 
 		//Bote
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-8.0f, 0.8f, 6.0f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::translate(model, glm::vec3(10.0f, 0.2f, 6.0f));
+		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Bote.Draw(lightingShader);
 		glBindVertexArray(0);
@@ -390,7 +397,8 @@ int main()
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		model = glm::mat4(1); //Seteamos la matriz
-		model = glm::translate(model, glm::vec3(0.0f, 2.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.17f, 0.17f, 0.17f));
+		model = glm::translate(model, glm::vec3(0.0f, 5.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
 		Patineta.Draw(Anim2);
