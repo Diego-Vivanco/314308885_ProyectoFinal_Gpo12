@@ -155,6 +155,7 @@ int main()
 	Shader lightingShader("Shaders/lighting.vs", "Shaders/lighting.frag");
 	Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
 	Shader Anim2("Shaders/anim2.vs", "Shaders/anim2.frag");
+	Shader AnimFuego("Shaders/anim_fuego.vs", "Shaders/anim_fuego.frag");
 
 	//CARGA DE MODELOS
 	Model Piso((char*)"Models/Piso/Piso.obj");
@@ -173,6 +174,7 @@ int main()
 	Model Clock1((char*)"Models/Relojes/reloj1/Clock1.obj");
 	Model ManecillasH((char*)"Models/Relojes/reloj1/ManecillaH.obj");
 	Model ManecillasM((char*)"Models/Relojes/reloj1/ManecillasM.obj");
+	Model Fuego((char*)"Models/Bote/fuego.obj");
 
 
 	// First, set the container's VAO (and VBO)
@@ -324,7 +326,7 @@ int main()
 
 
 		//Fachada
-	    model = glm::mat4(1);
+	   	model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 0.5f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -427,7 +429,21 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
 		Patineta.Draw(Anim2);
-
+		
+		//Fuego
+		AnimFuego.Use();
+		modelLoc = glGetUniformLocation(Anim.Program, "model");
+		viewLoc = glGetUniformLocation(Anim.Program, "view");
+		projLoc = glGetUniformLocation(Anim.Program, "projection");
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		model = glm::mat4(1); //Seteamos la matriz
+		model = glm::translate(model, glm::vec3(8.0f, 0.7f, 6.0f));
+		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
+		SV.Draw(AnimFuego);
 
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();
