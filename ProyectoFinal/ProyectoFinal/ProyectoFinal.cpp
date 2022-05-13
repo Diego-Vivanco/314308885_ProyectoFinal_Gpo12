@@ -162,12 +162,18 @@ int main()
 	Model Patineta((char*)"Models/Patineta/Patineta.obj");
 	Model Piano((char*)"Models/Piano/black_piano.obj");
 	Model Golden((char*)"Models/Golden/Golden.obj");
-	Model Gramofono((char*)"Models/Gramofono/Gramofono.obj");
+	Model Caja((char*)"Models/Gramofono/Caja.obj");
+	Model Manivela((char*)"Models/Gramofono/Caja.obj");
+	Model Disco((char*)"Models/Gramofono/Caja.obj");
 	Model Delorean((char*)"Models/Delorean/Delorean.obj");
 	Model Reloj1((char*)"Models/Relojes/reloj1/Wall Clock.obj");
 	Model Reloj2((char*)"Models/Relojes/reloj2/Clock_06.obj");
 	Model Reloj3((char*)"Models/Relojes/reloj3/Clock_obj.obj");
 	Model Bote((char*)"Models/Bote/pobelle/pobelle.obj");
+	Model Clock1((char*)"Models/Relojes/reloj1/Clock1.obj");
+	Model ManecillasH((char*)"Models/Relojes/reloj1/ManecillaH.obj");
+	Model ManecillasM((char*)"Models/Relojes/reloj1/ManecillasM.obj");
+
 
 	// First, set the container's VAO (and VBO)
 	GLuint VBO, VAO;
@@ -326,8 +332,8 @@ int main()
 		Fachada.Draw(lightingShader);
 		//Piano
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(4.0f, 0.8f, -1.0f));
-		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
+		model = glm::translate(model, glm::vec3(3.2f, 0.7f, -1.8f));
+		model = glm::scale(model, glm::vec3(0.35f, 0.5f, 0.35f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -337,50 +343,69 @@ int main()
 
 		//Golden
 		model = glm::mat4(1);
-		model = glm::scale(model, glm::vec3(0.25f, 0.25f, 0.25f));
-		model = glm::translate(model, glm::vec3(6.0f, 2.5f, 0.5f));
+		model = glm::scale(model, glm::vec3(0.3f, 0.25f, 0.6f));
+		model = glm::translate(model, glm::vec3(6.0f, 3.7f, 1.7f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Golden.Draw(lightingShader);
-		//Gramofono
+		//Gramofono (Caja)
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(3.0f, 0.8f, -1.0f));
+		model = glm::translate(model, glm::vec3(3.0f, 0.8f, -3.0f));
 		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
+		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Gramofono.Draw(lightingShader);
+		Caja.Draw(lightingShader);
+		//Gramofono (Manivela)
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Manivela.Draw(lightingShader);
 
+		//Gramofono (Disco)
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Disco.Draw(lightingShader);
 		//Delorean
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(9.0f, 1.0f, 9.0f));
-		model = glm::scale(model, glm::vec3(1.0f, 0.8f, 1.0f));
+		model = glm::translate(model, glm::vec3(8.5f, 0.85f, 9.0f));
+		model = glm::scale(model, glm::vec3(1.0f, 0.5f, 1.0f));
 		model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Delorean.Draw(lightingShader);
 
 		//Reloj 1
-		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-14.0f, 0.8f, -6.0f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+	/*	model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(3.0f, 2.0f, -2.4f));
+		model = glm::scale(model, glm::vec3(0.03f, 0.03f, 0.03f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Reloj1.Draw(lightingShader);
+		Reloj1.Draw(lightingShader);*/
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(3.0f, 2.0f, -2.4f));
+		model = glm::scale(model, glm::vec3(0.03f, 0.03f, 0.03f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Clock1.Draw(lightingShader);
+		model = glm::mat4(1);
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Clock1.Draw(lightingShader);
+
+
 
 		//Reloj 2
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-12.0f, 0.8f, -10.0f));
-		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
+		model = glm::translate(model, glm::vec3(2.0f, 0.87f, -2.9f));
+		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Reloj2.Draw(lightingShader);
 		glBindVertexArray(0); 
 
 		//Reloj 3
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(2.0f, 0.8f, 10.0f));
+		model = glm::translate(model, glm::vec3(2.0f, 2.0f, 7.0f));
 		model = glm::scale(model, glm::vec3(0.5f, 0.5f, 0.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Reloj3.Draw(lightingShader);
 
 		//Bote
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(10.0f, 0.2f, 6.0f));
+		model = glm::translate(model, glm::vec3(8.0f, 0.7f, 6.0f));
 		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Bote.Draw(lightingShader);
@@ -398,7 +423,7 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		model = glm::mat4(1); //Seteamos la matriz
 		model = glm::scale(model, glm::vec3(0.17f, 0.17f, 0.17f));
-		model = glm::translate(model, glm::vec3(0.0f, 5.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 8.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
 		Patineta.Draw(Anim2);
