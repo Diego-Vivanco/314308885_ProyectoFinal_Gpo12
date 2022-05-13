@@ -374,19 +374,19 @@ int main()
 		Delorean.Draw(lightingShader);
 
 		//Reloj 1
-	/*	model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(3.0f, 2.0f, -2.4f));
-		model = glm::scale(model, glm::vec3(0.03f, 0.03f, 0.03f));
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Reloj1.Draw(lightingShader);*/
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(3.0f, 2.0f, -2.4f));
 		model = glm::scale(model, glm::vec3(0.03f, 0.03f, 0.03f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Clock1.Draw(lightingShader);
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Clock1.Draw(lightingShader);
+		Reloj1.Draw(lightingShader);
+		//model = glm::mat4(1);
+		//model = glm::translate(model, glm::vec3(3.0f, 2.0f, -2.4f));
+		//model = glm::scale(model, glm::vec3(0.03f, 0.03f, 0.03f));
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//Clock1.Draw(lightingShader);
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//Clock1.Draw(lightingShader);
 
 
 
@@ -432,18 +432,18 @@ int main()
 		
 		//Fuego
 		AnimFuego.Use();
-		modelLoc = glGetUniformLocation(Anim.Program, "model");
-		viewLoc = glGetUniformLocation(Anim.Program, "view");
-		projLoc = glGetUniformLocation(Anim.Program, "projection");
+		modelLoc = glGetUniformLocation(AnimFuego.Program, "model");
+		viewLoc = glGetUniformLocation(AnimFuego.Program, "view");
+		projLoc = glGetUniformLocation(AnimFuego.Program, "projection");
 		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		model = glm::mat4(1); //Seteamos la matriz
 		model = glm::translate(model, glm::vec3(8.0f, 0.7f, 6.0f));
-		model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
+		model = glm::scale(model, glm::vec3(0.01f, 0.01f, 0.01f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
-		SV.Draw(AnimFuego);
+		Fuego.Draw(AnimFuego);
 
 		// Also draw the lamp object, again binding the appropriate shader
 		lampShader.Use();
