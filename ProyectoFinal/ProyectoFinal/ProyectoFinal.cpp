@@ -163,6 +163,7 @@ int main()
 	Model Patineta((char*)"Models/Patineta/Patineta.obj");
 	Model Piano((char*)"Models/Piano/black_piano.obj");
 	Model Golden((char*)"Models/Golden/Golden.obj");
+	Model Gramofono((char*)"Models/Gramofono/Gramofono.obj");
 	Model Caja((char*)"Models/Gramofono/Caja.obj");
 	Model Manivela((char*)"Models/Gramofono/Caja.obj");
 	Model Disco((char*)"Models/Gramofono/Caja.obj");
@@ -355,16 +356,17 @@ int main()
 		model = glm::scale(model, glm::vec3(0.3f, 0.3f, 0.3f));
 		model = glm::rotate(model, glm::radians(90.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Caja.Draw(lightingShader);
-		//Gramofono (Manivela)
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Manivela.Draw(lightingShader);
+		Gramofono.Draw(lightingShader);
+		//Caja.Draw(lightingShader);
+		////Gramofono (Manivela)
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//Manivela.Draw(lightingShader);
 
-		//Gramofono (Disco)
-		model = glm::mat4(1);
-		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		Disco.Draw(lightingShader);
+		////Gramofono (Disco)
+		//model = glm::mat4(1);
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//Disco.Draw(lightingShader);
 		//Delorean
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(8.5f, 0.85f, 9.0f));
@@ -439,8 +441,8 @@ int main()
 		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		model = glm::mat4(1); //Seteamos la matriz
-		model = glm::translate(model, glm::vec3(8.0f, 0.7f, 6.0f));
-		model = glm::scale(model, glm::vec3(0.01f, 0.01f, 0.01f));
+		model = glm::translate(model, glm::vec3(5.0f, 0.7f, 6.0f));
+		model = glm::scale(model, glm::vec3(0.001f, 0.001f, 0.001f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1f(glGetUniformLocation(Anim2.Program, "time1"), tiempo);
 		Fuego.Draw(AnimFuego);
