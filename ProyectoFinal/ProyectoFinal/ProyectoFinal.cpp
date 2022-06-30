@@ -159,7 +159,7 @@ int main()
 
 	//CARGA DE MODELOS
 	Model Piso((char*)"Models/Piso/Piso.obj");
-	Model Fachada((char*)"Models/Fachada/Fachada.obj");
+	Model Fachada((char*)"Models/Fachada/Casa.obj");
 	Model Patineta((char*)"Models/Patineta/Patineta.obj");
 	Model Piano((char*)"Models/Piano/black_piano.obj");
 	Model Golden((char*)"Models/Golden/Golden.obj");
@@ -328,7 +328,7 @@ int main()
 
 		//Fachada
 	   	model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.5f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.0f, 2.5f, 0.0f));
 		model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
