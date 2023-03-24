@@ -13,23 +13,38 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de origen\Shaders">
+      <UniqueIdentifier>{a79dfc75-f4f7-40b5-88e6-d913d4fb3023}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Model.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="modelAnim.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ProyectoFinal.cpp">
+    <ClCompile Include="MainPrueba.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\lighting.frag">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Shaders</Filter>
     </None>
     <None Include="Shaders\lighting.vs">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
+    <None Include="Shaders\anim2.vs">
+      <Filter>Archivos de origen\Shaders</Filter>
+    </None>
+    <None Include="Shaders\anim.frag">
+      <Filter>Archivos de origen\Shaders</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -1,0 +1,24 @@
+﻿  MainPrueba.cpp
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\modelAnim.h(519,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(482,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(736,93): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(777,72): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(1040,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(1041,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(1045,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(1046,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(1048,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\ProyectoFinal\MainPrueba.cpp(1049,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+soil2-debug.lib(SOIL2.obj) : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificación '/OPT:ICF'
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  Generando código
+  1 of 1083 functions (<0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+soil2-debug.lib(etc1_utils.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(etc1_utils.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\Release\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_helper.obj)' o en 'C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\Release\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(SOIL2.obj)' o en 'C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\Release\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  ProyectoFinal.vcxproj -> C:\Users\d_arm\Desktop\Proyecto_Final_LabCGIHC\314308885_PROYECTOFINAL2023-1_GPO11\ProyectoFinal\Release\ProyectoFinal.exe
